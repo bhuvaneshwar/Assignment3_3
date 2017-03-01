@@ -1,0 +1,90 @@
+1)List the components of hadoop2.X and explain each component in detail.
+
+	The major components of Hadoop are:
+
+		* YARN
+
+		* HDFS
+
+		* Mapreduce
+
+	* YARN :
+
+		- It is Yet Another Resource Negotiator.
+
+		- Yarn is mainly used for very large applications for big data processing.
+
+		- It is considered as the heart of Hadoop 2.X
+
+		_ YARN mainly provides resource management and gives data governance tools for hadoop.
+
+		- It acts as a central platform and provides security.
+
+		- It is used for writing data access applications that executes on hadoop
+
+		- Advantanges:
+
+			* Less expensive.
+
+			* Linear scale storage. 
+
+
+	*HDFS : 
+
+		- HDFS splits the huge amount of data and stores them in several data nodes at a time perfoming 
+		  parallel processing.
+
+		- Components of hdfs: 
+
+			* Namenode
+
+			* Secondary name node
+
+			* Datanode
+
+		- Namenode: It stores the meta dats as fs image and edit logs.
+
+			    It is the master node.
+
+			    If it goes down entire system goes down.
+
+		- Secondary namenode : 
+			    It helps to recover in case of  name node failures.
+
+			    It automatically updates to the namenode about the edits.
+
+		- Datanode : 
+			    These are the slave nodes.
+
+			    The data nodes are divided into several blocks of each 64 mb.
+
+			    The actual conents are stored here in data nodes.
+
+			    It periodically sends signal to the name node about the data transmissions.
+
+
+	* Map Reduce : 
+
+		- It distributes data across several machines for processing and called as 
+		  batch processing model.
+
+		- Major components are :
+		
+			*Job Tracker
+			*Task Tracker
+
+		* Job Tracker : 
+
+			- It assigns the mapreduce task to the task tracker.
+
+			- It also maintains the status of the task tracker.
+
+			- Overall execution of map reduce is controlled by job tracker. 
+
+		* Task Tracker :
+
+			- It executes the task assigned to it by job tracker.
+
+			- It runs the individual map-reduce tasks on data node.
+
+			- it communicates with job tracker periodically.
